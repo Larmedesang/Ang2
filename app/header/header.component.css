@@ -1,0 +1,16 @@
+nav {
+    background-color: grey;
+}
+
+a {
+    color: white;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 20px;
+}

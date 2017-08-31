@@ -1,0 +1,13 @@
+//2
+import { Component } from '@angular/core';
+import { Personne } from './personne';
+
+
+@Component({
+    selector: 'personne-form',
+    templateUrl: './app/personne/personneForm.component.html'
+})
+
+export class PersonneFormComponent {
+    model = new Personne(1,'PersonneA');
+}

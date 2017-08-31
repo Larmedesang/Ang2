@@ -1,0 +1,48 @@
+    <div>
+        <nav class='navbar navbar-default'>
+            <div class='container-fluid'>
+                <a class='navbar-brand'>{{pageTitle}}</a>
+                <ul class='nav navbar-nav'>
+      <li><a [routerLink] = "['/Accueil']">Accueil</a></li>
+      <li><a [routerLink] = "['/origines']">Gestion des entrées Origine</a></li>
+      <li><a [routerLink] = "['/Gestion_des_entrees']">Gestion des entrées</a></li>
+      <li><a [routerLink] = "['/depenses']">Gestion des dépenses PostDepense</a></li>
+      <li><a [routerLink] = "['/Gestion_des_depenses']">Gestion des dépenses</a></li>       
+      <li><a [routerLink] = "['/Gestion_exceptionnelle']">Gestion exceptionnelle</a></li>
+      <li><a [routerLink] = "['/Cv']">Cv</a></li>
+      <li><a [routerLink] = "['/Contact']">Contact</a></li>
+            
+                </ul>
+            </div>
+        </nav>
+        <div class='container'>
+            <router-outlet></router-outlet>
+        </div>
+     </div>
+
+<div class='panel panel-primary' *ngIf='origine'>
+  <div class='panel-heading' style='font-size:large'>
+    {{pageTitle + ': ' + origine.origineNom}}
+  </div>
+
+  <div class='panel-body'>
+    <div class='row'>
+      <div class='col-md-6'>
+        <div class='row'>
+          <div class='col-md-3'>Intitulé:</div>
+          <div class='col-md-6'>{{origine.origineNom}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'>Montant:</div>
+          <div class='col-md-6'>{{origine.price}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='panel-footer'>
+    <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+      <i class='glyphicon glyphicon-chevron-left'></i> Back
+    </a>
+  </div>
+</div>

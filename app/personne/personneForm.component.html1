@@ -1,0 +1,15 @@
+//3
+<div class = "container">
+    <h1>Formulaire de Personne</h1>
+    <form>
+        <div class = "form-group">
+            <label for = "personneid">ID</label>
+            <input type = "text" class = "form-control" id = "personneid" required [(ngModel)] = "model.personneid" name = "id">
+        </div>
+        
+        <div class = "form-group">
+            <label for = "name">Name</label>
+            <input type = "text" class = "form-control" id = "name"  [(ngModel)] = "model.personnename" name = "name">
+        </div>
+    </form>
+</div>
